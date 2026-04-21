@@ -17,7 +17,7 @@ def distance(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
     """Great circle distance (km) between two points"""
     r = 6371
     ry1, rx1, ry2, rx2 = radians(lat1), radians(lon1), radians(lat2), radians(lon2)
-    return r * acos(min(1.0, sin(ry1) * sin(ry2) + cos(ry1) * cos(ry2) * cos(rx1 - rx2)))
+    return r * acos(min(1.0, max(-1.0, sin(ry1) * sin(ry2) + cos(ry1) * cos(ry2) * cos(rx1 - rx2))))
 
 
 def _get_location_or_create(m: Model, locations: dict[Key, Location], key: Key) -> Location:
