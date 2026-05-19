@@ -39,6 +39,9 @@ url = "https://pypi.flatt.tech/simple/"
 [tool.pytest.ini_options]
 pythonpath = ["src"]
 
+[tool.pyrefly]
+project-includes = ["src"]
+
 [tool.ruff]
 src = ["src"]
 
