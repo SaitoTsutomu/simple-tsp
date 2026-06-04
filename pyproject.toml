@@ -8,7 +8,7 @@ classifiers = [
   "Topic :: Scientific/Engineering",
 ]
 dependencies = [
-  "pyvrp>=0.12.2",
+  "pyvrp>=0.13.4",
 ]
 description = "Solving the Traveling Salesman Problem"
 name = "simple-tsp"
@@ -21,12 +21,11 @@ homepage = "https://github.com/SaitoTsutomu/simple-tsp"
 
 [dependency-groups]
 dev = [
-  "pytest>=9.0.2",
+  "pytest>=9.0.3",
 ]
 
 [tool.taskipy.tasks]
 lint = "pyrefly check src && ruff check"
-pip-audit = "uv run -w pip-audit pip-audit"
 test = "uv run pytest"
 
 [tool.uv]
