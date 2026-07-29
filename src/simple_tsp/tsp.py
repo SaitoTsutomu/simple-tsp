@@ -65,7 +65,7 @@ def tsp(
             location_j = _get_location_or_create(m, locations, j)
             m.add_edge(location_i, location_j, distance=distance)
     else:
-        assert isinstance(distances, list)  # noqa: S101
+        assert isinstance(distances, list)  # ruff: ignore[assert]
         n = len(distances)
         for i in range(1, n):
             m.add_client(x=0, y=0, name=str(i))

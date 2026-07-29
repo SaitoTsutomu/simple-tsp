@@ -46,14 +46,14 @@ src = ["src"]
 
 [tool.ruff.lint]
 ignore = [
-  "COM812",
+  "missing-trailing-comma",
   "CPY",
-  "D203",
-  "D213",
-  "D400",
-  "D415",
-  "DOC201",
-  "E501",
+  "incorrect-blank-line-before-class",
+  "multi-line-summary-second-line",
+  "missing-trailing-period",
+  "missing-terminal-punctuation",
+  "docstring-missing-returns",
+  "line-too-long",
 ]
 preview = true
 select = ["ALL"]
@@ -63,4 +63,4 @@ max-complexity = 10
 
 [build-system]
 build-backend = "uv_build"
-requires = ["uv_build>=0.11.6,<0.12.0"]
+requires = ["uv_build>=0.12.0,<0.13.0"]
